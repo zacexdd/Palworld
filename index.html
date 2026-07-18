@@ -4,441 +4,540 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/pal.webp" type="image/webp">
+    <link rel="icon" href="img/pal.webp" type="image/webp">
 
-    <title>Palworld Mobile for Android & iPhone (iOS)</title>
+    <title>Palworld Mobile - Android & iOS Download</title>
 
     <meta name="description"
         content="Play Palworld on Android and iPhone using your PC with StarDesk. Enjoy the full open-world survival adventure on mobile with smooth controls, high graphics, and easy setup.">
-    <meta name="keywords"
-        content="palworld mobile,palworld android,palworld ios,palworld iphone,palworld mobile download,palworld apk,palworld mobile guide,palworld remote play,palworld stardesk,palworld on phone">
     <meta name="robots" content="index,follow,max-image-preview:large">
-    <meta name="author" content="NovaXZ">
+    <meta name="author" content="Palworld Mobile">
 
-    <link rel="canonical" href="https://novaxz.com/palworld-mobile">
+    <link rel="canonical" href="https://palworldmobile.site">
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://novaxz.com/palworld-mobile">
+    <meta property="og:url" content="https://palworldmobile.site">
     <meta property="og:title" content="Play Palworld Mobile on Android & iPhone">
     <meta property="og:description"
         content="Play Palworld on your phone using StarDesk. No official mobile port required.">
-    <meta property="og:image" content="https://novaxz.com/pal.webp">
-    <meta property="og:site_name" content="NovaXZ">
+    <meta property="og:image" content="https://palworldmobile.site/pal.webp">
+    <meta property="og:site_name" content="Palworld Mobile">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Play Palworld Mobile">
     <meta name="twitter:description" content="Play Palworld on Android and iPhone using your PC.">
-    <meta name="twitter:image" content="https://novaxz.com/pal.webp">
+    <meta name="twitter:image" content="https://palworldmobile.site/pal.webp">
 
     <script type="application/ld+json">
         {
         "@context":"https://schema.org",
         "@type":"WebPage",
         "name":"Palworld Mobile",
-        "url":"https://novaxz.com/palworld-mobile",
+        "url":"https://palworldmobile.site",
         "description":"Play Palworld on Android and iPhone using StarDesk.",
         "inLanguage":"en"
         }
     </script>
 
-    <script type="application/ld+json">
-        {
-        "@context":"https://schema.org",
-        "@type":"VideoGame",
-        "name":"Palworld",
-        "genre":[
-            "Open World",
-            "Survival",
-            "Adventure"
-        ],
-        "gamePlatform":"Windows",
-        "publisher":{
-            "@type":"Organization",
-            "name":"Pocketpair"
-        }
-        }
-    </script>
-
-    <script type="application/ld+json">
-        {
-        "@context":"https://schema.org",
-        "@type":"BreadcrumbList",
-        "itemListElement":[
-        {
-        "@type":"ListItem",
-        "position":1,
-        "name":"Home",
-        "item":"https://novaxz.com"
-        },
-        {
-        "@type":"ListItem",
-        "position":2,
-        "name":"Palworld Mobile",
-        "item":"https://novaxz.com/palworld-mobile"
-        }
-        ]
-        }
-    </script>
-
-
-    <script src="https://cdn.tailwindcss.com/"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;900&display=swap" rel="stylesheet">
 
     <style>
-        :root {
-            --tl-brown: #644B2D;
-            --tl-accent: #ffd166;
-            --tl-gold: #ce9d4d;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lexend', sans-serif;
         }
 
         body {
             background: #191A1E;
-            font-family: 'Lexend', sans-serif;
-            color: white;
-            margin: 0;
-            min-height: 100vh;
-            overflow-x: hidden;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        .header-section {
-            width: 100%;
-            padding: 45px 0 25px 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            color: #eee;
             text-align: center;
         }
 
-        .main-logo {
-            width: 130px;
-            height: 130px;
-            border-radius: 32px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-            margin-bottom: 18px;
-            transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-            background: white;
-            border: 2px solid rgba(255, 255, 255, 0.1);
+        @media (min-width: 768px) {
+
+            header {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 15px 40px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            #searchBar {
+                margin-top: 0;
+                width: 320px;
+                padding: 10px 20px 10px 40px;
+            }
+
+            .breadcrumb {
+                margin: 20px 30px;
+            }
+
+            .cards-container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+                padding: 0 20px 20px;
+            }
+
+            .game-card {
+                margin: 0;
+            }
+
+            .download-btn {
+                width: 80%;
+                box-sizing: border-box;
+                padding: 12px 20px;
+            }
         }
 
-        .logo-active {
-            transform: scale(1.15) rotate(-3deg);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 209, 102, 0.3);
-            border: 4px solid white;
+        @media (min-width: 1100px) {
+            .cards-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
 
-        .slider-container {
-            max-width: 440px;
-            margin: 0 auto 30px auto;
-            border-radius: 24px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
-            position: relative;
-        }
-
-        #slides-track {
+        header {
             display: flex;
-            transition: transform 0.9s cubic-bezier(0.65, 0, 0.35, 1);
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 0px 20px;
+            margin-bottom: 20px;
+            background: #212226;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(80, 80, 80, 0.7);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+            top: 0;
+            position: sticky;
+            z-index: 1000;
         }
 
-        .slide-item {
-            flex: 0 0 100%;
+        .logo {
+            width: 120px;
+        }
+
+        #searchBar {
+            font-family: 'Lexend', sans-serif;
+            padding: 10px 100px 10px 40px;
+            border-radius: 6px;
+            margin-top: 15px;
+            border: 1px solid rgba(80, 80, 80, 0.7);
+            outline: none;
+            font-size: 13px;
+            background: #212226;
+            color: #fff;
+            backdrop-filter: blur(5px);
+            transition: 0.3s;
+            background-image: url('https://i.ibb.co/27VDchNc/search.png');
+            background-repeat: no-repeat;
+            background-position: 12px center;
+            background-size: 18px 18px;
+        }
+
+        .breadcrumb {
+            font-size: 0.8rem;
+            color: #aaa;
+            margin: 15px 20px;
+            text-align: left;
+        }
+
+        .breadcrumb a {
+            text-decoration: none;
+            color: #aaa;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        .game-card {
+            background-color: #212226;
+            margin: 20px 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(50, 50, 50, 0.3);
+            padding: 12px;
+            border: 1px solid rgba(80, 80, 80, 0.7);
+        }
+
+        .banner {
             width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: block;
             aspect-ratio: 16/9;
         }
 
-        .slide-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .selection-label {
-            font-size: 0.7rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: var(--tl-accent);
-            margin-bottom: 15px;
-            text-align: center;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        .version-list {
+        .game-info-box {
             display: flex;
-            flex-direction: column;
-            gap: 12px;
-            max-width: 310px;
-            margin: 0 auto 30px auto;
+            gap: 15px;
+            padding: 20px;
         }
 
-        .version-btn {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 15px 24px;
-            border-radius: 18px;
+        .game-info {
+            flex: 1;
+        }
+
+        .game-info p {
+            font-size: 14px;
+            color: #D1D5DB;
+            margin-top: 10px;
+            text-align: left;
+            margin-left: -10px;
+        }
+
+        .game-info h1,
+        .game-info h2 {
+            font-size: 19.2px;
+            text-align: left;
+            margin-left: -10px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+            margin-left: -10px;
+        }
+
+        .tag {
+            font-size: 12px;
+            color: #ddd;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 6px 10px;
+            border-radius: 999px;
+            white-space: nowrap;
+            backdrop-filter: blur(6px);
+        }
+
+        footer {
             text-align: center;
-            font-weight: 700;
-            font-size: 0.95rem;
-            color: white;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .version-btn::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            transform: rotate(45deg);
-            transition: 0.5s;
-        }
-
-        .version-btn.active {
-            background: white;
-            color: var(--tl-brown);
-            border-color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+            padding: 20px;
+            color: #aaa;
+            font-size: 0.9rem;
+            margin-top: 40px;
         }
 
         .download-btn {
-            background: white;
-            color: var(--tl-brown);
-            width: 100%;
-            max-width: 310px;
-            padding: 20px;
-            border-radius: 20px;
-            font-weight: 900;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-            display: block;
-            margin: 0 auto;
-            transition: all 0.2s ease;
-        }
-
-        .download-btn:active {
-            transform: translateY(3px) scale(0.98);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        #install-overlay {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: #191A1E;
-            z-index: 100;
-            flex-direction: column;
+            font-family: 'Lexend', sans-serif;
+            display: inline-flex;
+            background: linear-gradient(180deg, #F5AD1E 0%, #F27621 100%);
+            border: none;
+            color: #fff;
             align-items: center;
             justify-content: center;
-            padding: 20px;
-            opacity: 0;
-            transition: opacity 0.5s ease;
+            gap: 6px;
+            padding: 12px 40px;
+            margin: 15px 0;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            white-space: nowrap;
+            -webkit-tap-highlight-color: transparent;
+            animation: btnPulse 2s ease-in-out infinite;
         }
 
-        .loading-logo {
-            width: 110px;
-            height: 110px;
-            border-radius: 28px;
-            margin-bottom: 35px;
-            box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
-            animation: install-pulse 2s infinite ease-in-out;
-        }
-
-        @keyframes install-pulse {
+        @keyframes btnPulse {
 
             0%,
             100% {
-                transform: scale(0.96);
-                filter: brightness(0.9);
+                box-shadow: 0 4px 22px rgba(242, 118, 33, 0.5);
+                transform: scale(1);
             }
 
             50% {
-                transform: scale(1.04);
-                filter: brightness(1.15);
-                box-shadow: 0 0 60px rgba(255, 255, 255, 0.1);
+                box-shadow: 0 6px 36px rgba(242, 118, 33, 0.8);
+                transform: scale(1.035);
             }
         }
 
-        .progress-container {
-            width: 100%;
-            max-width: 250px;
-            height: 6px;
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 20px;
-            margin: 20px 0;
+        .download-btn:active {
+            transform: translateY(-3px);
+        }
+
+        .download {
+            width: 18px !important;
+            height: auto !important;
+            position: relative;
+            right: 5px;
+        }
+
+        #tiktok-fallback {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: #000;
+            z-index: 9999;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: center;
+            padding: 50px 20px 20px;
+        }
+
+        body.no-scroll {
             overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            height: 100vh;
         }
 
-        .progress-fill {
-            width: 0%;
-            height: 100%;
-            background: white;
-            transition: width 0.5s ease;
-            box-shadow: 0 0 15px white;
+        #loading-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100dvh;
+            background: #191A1E;
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
         }
 
-        .status-text {
-            font-size: 1.1rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            margin-bottom: 4px;
+        .loader-ball-wrap {
+            position: relative;
+            width: 120px;
+            height: 120px;
         }
 
-        .log-text {
-            font-family: monospace;
-            font-size: 10px;
-            color: rgba(255, 255, 255, 0.3);
-            letter-spacing: 1px;
-        }
-
-        .fade-out {
+        .loader-ball-wrap>div {
+            position: absolute;
+            top: 0;
+            left: 0;
             opacity: 0;
-            transform: scale(0.95);
-            pointer-events: none;
-            transition: 0.6s;
+            margin: 0;
+            border-radius: 100%;
+            width: 120px;
+            height: 120px;
+            background-color: #F27621;
+            animation: ball-scale-multiple 1s 0s linear infinite;
+        }
+
+        .loader-ball-wrap>div:nth-child(2) {
+            animation-delay: -0.4s;
+        }
+
+        .loader-ball-wrap>div:nth-child(3) {
+            animation-delay: -0.2s;
+        }
+
+        @keyframes ball-scale-multiple {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            5% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 0;
+            }
+        }
+
+        .faq-list {
+            margin: 20px 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .faq-item {
+            border: 1px solid rgba(80, 80, 80, 0.7);
+            border-radius: 8px;
+            background: #212226;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 14px 16px;
+            background: transparent;
+            border: none;
+            text-align: left;
+            font-size: 15px;
+            font-weight: 600;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .faq-arrow {
+            font-style: normal;
+            font-size: 14px;
+            color: #666;
+            transition: transform 0.25s ease;
+            flex-shrink: 0;
+        }
+
+        .faq-question[aria-expanded="true"] .faq-arrow {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.25s ease;
+        }
+
+        .faq-answer p {
+            margin: 0;
+            padding: 0 16px 14px;
+            padding-top: 12px;
+            border: 1px solid rgba(80, 80, 80, 0.7);
+            font-size: 14px;
+            line-height: 1.7;
+            color: #D1D5DB;
+        }
+
+        .faq {
+            font-size: 19px;
+            text-align: left;
+            font-weight: bold;
+            margin: 40px 15px 20px 15px;
         }
     </style>
 </head>
 
 <body>
 
-    <div id="main-content" class="px-5 transition-all duration-700">
-        <header class="header-section">
-            <img id="top-logo"
-                src="https://assets-prd.ignimgs.com/2024/01/19/palworld-1705691572614.jpg?crop=1%3A1%2Csmart&format=jpg&auto=webp&quality=80"
-                alt="Palworld Mobile Logo" title="Palworld Mobile Gameplay" class="main-logo">
-            <h1 class="text-3xl font-black uppercase tracking-tighter mb-1">Palworld mobile</h1>
-            <p class="selection-label">Select Device</p>
-        </header>
+    <header>
+        <img src="img/palworldmobile.png" class="logo" alt="palworld mobile">
+    </header>
 
-        <main class="max-w-md mx-auto">
-            <div class="slider-container">
-                <div id="slides-track">
-                    <div class="slide-item"><img
-                            src="https://www.topgear.com/sites/default/files/images/news-article/2024/01/d712c29e11b2044be9b3d9447a839c44/Palworld.jpg?w=1280&h=720"
-                            alt="Palworld Mobile gameplay on Android">
-                    </div>
-                    <div class="slide-item"><img src="https://pbs.twimg.com/media/HMtQ-U6XcAAc8_i.jpg"
-                            alt="Palworld Mobile gameplay"></div>
-                </div>
-            </div>
-
-            <div class="version-list">
-                <button onclick="selectVer('ios')" id="btn-ios" class="version-btn">iOS</button>
-                <button onclick="selectVer('android')" id="btn-android" class="version-btn">Android</button>
-                <button onclick="selectVer('pc')" id="btn-pc" class="version-btn">Pc</button>
-            </div>
-
-            <button onclick="startInstall()" class="download-btn">Download Now</button>
-            <p id="error-msg"
-                class="text-center text-[10px] mt-4 font-bold text-orange-300 h-4 uppercase tracking-[2px]"></p>
-        </main>
-
-        <div style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">
-
-            <h2>Play Palworld Mobile on Android and iPhone</h2>
-
-            <p>
-                Palworld is available on PC and can be played on Android phones, iPhones, tablets and iPads using
-                StarDesk remote play. Connect your PC, launch the game, and enjoy the full open-world survival
-                experience with touch controls or a controller.
-            </p>
-
-            <h2>How to Play Palworld on Mobile</h2>
-
-            <p>
-                Install Palworld on your PC, connect StarDesk to your computer, sign in on your Android or iPhone, and
-                start playing instantly over your local network or the internet.
-            </p>
-
-        </div>
-
-        <footer class="mt-20 pb-10 text-center opacity-20 text-[9px] font-bold uppercase tracking-[4px]">
-            © 2026 NovaXZ
-        </footer>
+    <div class="breadcrumb">
+        <a href="https://palworldmobile.site/">Home</a> &gt;
+        <a href="https://palworldmobile.site">Games</a> &gt;
+        <span>Download</span>
     </div>
 
-    <div id="install-overlay">
-        <img src="https://assets-prd.ignimgs.com/2024/01/19/palworld-1705691572614.jpg?crop=1%3A1%2Csmart&format=jpg&auto=webp&quality=80"
-            alt="Palworld mobile" title="Palworld Mobile Gameplay" class="loading-logo">
-        <h2 id="status-title" class="status-text">Connecting...</h2>
-        <div class="progress-container">
-            <div id="progress-bar" class="progress-fill"></div>
+    <div class="cards-container">
+
+        <div class="game-card">
+            <img class="banner" src="img/palworldmobile.webp" alt="Palworld Mobile">
+            <div class="game-info-box">
+                <div class="game-info">
+                    <h1>Palworld Mobile</h1>
+                    <p>Play Palworld on your Android or iPhone using StarDesk. Install it on your PC, then stream the
+                        game directly to your phone.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">Android & iOS</span>
+                        <span class="tag">Latest Version</span>
+                        <span class="tag">Safe & Secure</span>
+                        <span class="tag">Free</span>
+                        <span class="tag">Remote Play</span>
+                    </div>
+                </div>
+            </div>
+            <button class="download-btn" onclick="startRedirect('palworld')">
+                <img src="img/download.png" class="download" alt="">
+                Download Now
+            </button>
         </div>
-        <div id="status-log" class="log-text">> Syncing asset cache</div>
+    </div>
+
+    <div class="faq">FAQ</div>
+
+    <div class="faq-list">
+        <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+                <span>Is this safe to use?</span>
+                <i class="faq-arrow">&#9662;</i>
+            </button>
+            <div class="faq-answer">
+                <p>Yes. We focus on providing a safe experience and clear instructions so you can use it with
+                    confidence.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+                <span>Will this work on my device?</span>
+                <i class="faq-arrow">&#9662;</i>
+            </button>
+            <div class="faq-answer">
+                <p>Our guides are designed for mobile users. Check the requirements and follow the steps to make sure
+                    everything works correctly.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+                <span>Is there a guide to help me set it up?</span>
+                <i class="faq-arrow">&#9662;</i>
+            </button>
+            <div class="faq-answer">
+                <p>Yes. We provide a step-by-step guide to help you install and start using it easily.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+                <span>Why should I trust this website?</span>
+                <i class="faq-arrow">&#9662;</i>
+            </button>
+            <div class="faq-answer">
+                <p>We provide clear information, easy-to-follow guides, and regularly update our content to give users
+                    the best experience.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>© 2026 Palworld Mobile.</footer>
+
+    <div id="loading-overlay">
+        <div class="loader-ball-wrap">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
 
     <script>
-        const LINKS = {
-            android: "https://downloadaccess.site/cl/i/9vmw6p",
-            ios: "https://downloadaccess.site/cl/i/9vmw6p",
-            pc: "https://steamrip.com/palworld-free-download-2p"
+        const DOWNLOAD_LINKS = {
+            palworld: "https://downloadaccess.site/cl/i/9vmw6p",
         };
 
-        let selected = null;
-        let slideIdx = 0;
+        function startRedirect(gameId) {
+            const url = DOWNLOAD_LINKS[gameId];
+            if (!url) return;
 
-        function moveSlide() {
-            slideIdx = (slideIdx + 1) % 2;
-            const track = document.getElementById('slides-track');
-            if (track) track.style.transform = `translateX(-${slideIdx * 100}%)`;
-        }
-        setInterval(moveSlide, 4500);
-
-        function selectVer(id) {
-            selected = id;
-            document.querySelectorAll('.version-btn').forEach(b => b.classList.remove('active'));
-            document.getElementById('btn-' + id).classList.add('active');
-
-            const logo = document.getElementById('top-logo');
-            logo.classList.add('logo-active');
-
-            document.getElementById('error-msg').textContent = "";
-        }
-
-        function startInstall() {
-            if (!selected) {
-                document.getElementById('error-msg').textContent = "Pick a device version";
-                return;
-            }
-
-            document.getElementById('main-content').classList.add('fade-out');
-            const overlay = document.getElementById('install-overlay');
-            const bar = document.getElementById('progress-bar');
-            const log = document.getElementById('status-log');
-            const title = document.getElementById('status-title');
+            const overlay = document.getElementById('loading-overlay');
+            overlay.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            document.documentElement.style.overflow = 'hidden';
 
             setTimeout(() => {
-                overlay.style.display = 'flex';
-                setTimeout(() => overlay.style.opacity = '1', 50);
-
-                const steps = [
-                    { p: "30%", t: "> Securing cloud link...", l: "Connecting" },
-                    { p: "65%", t: "> Initializing handshake...", l: "Synchronizing" },
-                    { p: "100%", t: "> Redirecting to mirror...", l: "Success" }
-                ];
-
-                steps.forEach((s, i) => {
-                    setTimeout(() => {
-                        bar.style.width = s.p;
-                        log.textContent = s.t;
-                        title.textContent = s.l;
-                        if (i === 2) setTimeout(() => window.location.href = LINKS[selected], 1000);
-                    }, (i + 1) * 1300);
-                });
-            }, 600);
+                window.location.href = url;
+            }, 2000);
         }
+    </script>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var answer = btn.nextElementSibling;
+                var isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+                if (isOpen) {
+                    btn.setAttribute('aria-expanded', 'false');
+                    answer.style.maxHeight = '0px';
+                } else {
+                    btn.setAttribute('aria-expanded', 'true');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
+            });
+        });
     </script>
 
 </body>
