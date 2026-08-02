@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/pal.webp" type="image/webp">
+
+    <title>Palworld Mobile iOS: Release Status & Requirements</title>
+    <meta name="description"
+        content="Is Palworld Mobile coming to iPhone? App Store release status, device requirements, alpha testing details, and why there's no IPA yet.">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <meta name="author" content="Palworld Mobile">
+
+    <link rel="canonical" href="https://palworldmobile.site/palworld-mobile-ios">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://palworldmobile.site/palworld-mobile-ios">
+    <meta property="og:title" content="Palworld Mobile iOS: Release Status & Requirements">
+    <meta property="og:description"
+        content="Is Palworld Mobile coming to iPhone? App Store release status, device requirements, and alpha testing details.">
+    <meta property="og:image" content="https://palworldmobile.site/img/pal.webp">
+    <meta property="og:site_name" content="Palworld Mobile">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Palworld Mobile iOS: Release Status & Requirements">
+    <meta name="twitter:description"
+        content="Is Palworld Mobile coming to iPhone? App Store status, requirements, and alpha testing details.">
+    <meta name="twitter:image" content="https://palworldmobile.site/img/pal.webp">
+
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Palworld Mobile iOS",
+        "url": "https://palworldmobile.site/palworld-mobile-ios",
+        "description": "Palworld Mobile iOS release status, App Store details, device requirements, and alpha testing information.",
+        "inLanguage": "en",
+        "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://palworldmobile.site/img/pal.webp"
+        }
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+        "@context":"https://schema.org",
+        "@type":"BreadcrumbList",
+        "itemListElement":[
+            {
+            "@type":"ListItem",
+            "position":1,
+            "name":"Home",
+            "item":"https://palworldmobile.site/"
+            },
+            {
+            "@type":"ListItem",
+            "position":2,
+            "name":"Palworld Mobile iOS",
+            "item":"https://palworldmobile.site/palworld-mobile-ios"
+            }
+        ]
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+            "@type": "Question",
+            "name": "Will Palworld Mobile be on iPhone?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, iOS is one of the two confirmed target platforms for Palworld Mobile, alongside Android. No release date has been announced yet."
+            }
+            },
+            {
+            "@type": "Question",
+            "name": "Will it be on the App Store?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A standard App Store release is expected once Palworld Mobile exits closed alpha testing. No App Store listing or TestFlight beta is live yet."
+            }
+            },
+            {
+            "@type": "Question",
+            "name": "Can I install Palworld Mobile on iPhone right now?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. There is no legitimate IPA, TestFlight link, or App Store listing available yet since the game hasn't reached public release. Any file claiming to be Palworld Mobile for iOS is not the real game."
+            }
+            },
+            {
+            "@type": "Question",
+            "name": "What are the iOS requirements for Palworld Mobile?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Official minimum iOS version and supported iPhone/iPad models have not been announced. Games with similar graphics demands typically require recent A-series or M-series chips for stable performance."
+            }
+            },
+            {
+            "@type": "Question",
+            "name": "Will Palworld Mobile release on iOS at the same time as Android?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Not confirmed. Apple's App Store review process for games with loot-based mechanics and online features tends to be stricter than Google Play's, which could mean iOS launches slightly after Android even under the same broad release window."
+            }
+            }
+        ]
+        }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lexend', sans-serif;
+        }
+
+        body {
+            background: #191A1E;
+            color: #eee;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            header {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 15px 40px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .download-btn {
+                margin-right: 30px;
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1100px) {
+            .features-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 0px 20px;
+            margin-bottom: 20px;
+            background: rgb(33, 34, 38, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(80, 80, 80, 0.7);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+            top: 0;
+            position: sticky;
+            z-index: 1000;
+        }
+
+        .logo {
+            width: 120px;
+        }
+
+        .banner {
+            width: 100px;
+            height: 100%;
+            border-radius: 10px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .game-info-box {
+            display: flex;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .game-info {
+            flex: 1;
+        }
+
+        .game-info p {
+            font-size: 14px;
+            color: #D1D5DB;
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        .game-info h1 {
+            font-size: 19.2px;
+            text-align: left;
+        }
+
+        .low {
+            font-weight: 200;
+            font-size: 14px;
+        }
+
+        .lower {
+            font-size: 11px;
+            font-weight: normal;
+            position: relative;
+            top: 1px;
+            right: 2px;
+        }
+
+        .breadcrumb {
+            font-size: 0.8rem;
+            color: #aaa;
+            margin: 15px 20px;
+            text-align: left;
+            margin-bottom: 0px;
+        }
+
+        .breadcrumb a {
+            text-decoration: none;
+            color: #aaa;
+        }
+
+        .breadcrumb span {
+            color: #fff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #aaa;
+            font-size: 0.9rem;
+            margin-top: 40px;
+        }
+
+        .download-btn {
+            font-family: 'Lexend', sans-serif;
+            display: inline-flex;
+            background: #009e61;
+            border: none;
+            color: #fff;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            width: 300px;
+            height: 48px;
+            padding: 0 16px;
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            white-space: nowrap;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .down-btn {
+            font-family: 'Lexend', sans-serif;
+            display: inline-flex;
+            background: #F27621;
+            border: none;
+            color: #fff;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            width: 300px;
+            height: 48px;
+            padding: 0 16px;
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            white-space: nowrap;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .download {
+            width: 18px !important;
+            height: auto !important;
+            position: relative;
+            right: 5px;
+        }
+
+        .card-top {
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card-top::after {
+            content: "";
+            display: block;
+            height: 1px;
+            background: rgba(80, 80, 80, 0.7);
+            margin: 0 20px;
+            margin-top: 40px;
+        }
+
+        .faq-list {
+            margin: 20px 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .faq-item {
+            border: 1px solid rgba(80, 80, 80, 0.7);
+            border-radius: 8px;
+            background: #212226;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 14px 16px;
+            background: transparent;
+            border: none;
+            text-align: left;
+            font-size: 15px;
+            font-weight: 600;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .faq-arrow {
+            font-style: normal;
+            font-size: 14px;
+            color: #666;
+            transition: transform 0.25s ease;
+            flex-shrink: 0;
+        }
+
+        .faq-question[aria-expanded="true"] .faq-arrow {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.25s ease;
+        }
+
+        .faq-answer p {
+            margin: 0;
+            padding: 0 16px 14px;
+            padding-top: 12px;
+            border: 1px solid rgba(80, 80, 80, 0.7);
+            font-size: 14px;
+            line-height: 1.7;
+            color: #D1D5DB;
+        }
+
+        .seo-section {
+            background: #212226;
+            margin: 20px 15px;
+            padding: 24px;
+            border-radius: 10px;
+            border: 1px solid rgba(80, 80, 80, .7);
+            box-shadow: 0 0 15px rgba(50, 50, 50, .3);
+            text-align: left;
+        }
+
+        .seo-section h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .seo-section p {
+            color: #D1D5DB;
+            font-size: 15px;
+            line-height: 1.9;
+            margin-bottom: 18px;
+        }
+
+        .seo-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .seo-section strong {
+            color: #fff;
+        }
+
+        @media (min-width:768px) {
+            .seo-section {
+                padding: 30px;
+            }
+
+            .seo-section h2 {
+                font-size: 28px;
+            }
+
+            .seo-section p {
+                font-size: 16px;
+            }
+        }
+
+        .requirements-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .requirements-list li {
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid rgba(255, 255, 255, .08);
+            border-radius: 8px;
+            padding: 14px 16px;
+            margin-bottom: 12px;
+            color: #D1D5DB;
+            line-height: 1.7;
+        }
+
+        .requirements-list strong {
+            color: #fff;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid rgba(255, 255, 255, .08);
+            border-radius: 10px;
+            padding: 18px;
+        }
+
+        .feature-card h3 {
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            margin: 0;
+            color: #D1D5DB;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .source-link {
+            color: #F27621;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color .2s ease;
+        }
+
+        .source-link:hover {
+            color: #ff9b52;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="img/palworldmobile.png" class="logo" alt="palworld mobile">
+    </header>
+
+    <div class="breadcrumb">
+        <a href="/">Home</a> &gt;
+        <span>iOS</span>
+    </div>
+
+    <div class="card-top">
+        <div class="game-info-box">
+            <img class="banner" src="img/pal.webp" alt="Palworld Mobile for iOS">
+            <div class="game-info">
+                <h1>Palworld Mobile for iOS</h1>
+                <p>Everything confirmed so far about the iPhone release: App Store status, device
+                    requirements, and how to avoid fake downloads.</p>
+                <p style="font-size:12px;color:#8a8f98;margin-top:6px;">Last updated: August 02, 2026</p>
+            </div>
+        </div>
+        <button class="down-btn" onclick="window.location.href='https://palworldm.com'">
+            <img src="img/download.png" class="download" alt="pre-register palworld mobile button">
+            Pre-Register <span class="lower">Official</span>
+        </button>
+    </div>
+
+    <section class="seo-section">
+        <div class="game-info">
+            <h2>Is Palworld Mobile Coming to iPhone?</h2>
+            <p>
+                Yes. iOS is one of the two confirmed platforms for Palworld Mobile, developed by
+                Krafton's PUBG Studios under license from Pocketpair, alongside Android. What hasn't
+                been confirmed is a release date — the game remains in closed regional alpha testing
+                with no global launch window announced.
+            </p>
+        </div>
+    </section>
+
+    <section class="seo-section">
+        <div class="game-info">
+            <h2>App Store Release Status</h2>
+            <p>
+                No App Store listing exists yet for Palworld Mobile, and no TestFlight beta has been
+                made publicly available. Krafton has framed the mobile version as a cross-platform
+                release rather than an Android-exclusive title, so a standard App Store launch is
+                expected once the game exits alpha testing.
+            </p>
+            <p>
+                One factor worth watching: Apple's review process for games involving loot-based
+                creature capture and online multiplayer features tends to be stricter than Google
+                Play's, particularly around age ratings and monetization disclosures. This could mean
+                iOS availability lags slightly behind Android even if both launch within the same
+                broad window.
+            </p>
+        </div>
+    </section>
+
+    <section class="seo-section">
+        <h2>iOS Requirements: Known vs. Unknown</h2>
+        <ul class="requirements-list">
+            <li><strong>Minimum iOS version:</strong> Not announced.</li>
+            <li><strong>Supported devices:</strong> Not announced.</li>
+            <li><strong>Storage size:</strong> Not announced.</li>
+            <li><strong>Expected chip requirement:</strong> Likely a recent A-series or M-series
+                chip, based on requirements for other high-fidelity mobile survival and open-world
+                games on iOS — not officially confirmed.</li>
+            <li><strong>Controller support:</strong> Unconfirmed, though iOS natively supports
+                MFi/Bluetooth controllers, which many Krafton mobile titles use.</li>
+        </ul>
+    </section>
+
+    <section class="seo-section">
+        <div class="game-info">
+            <h2>Confirmed iOS Features</h2>
+            <p>
+                Krafton has confirmed Palworld Mobile will not use a live-service or battle-pass
+                monetization model, matching the PC version's single-purchase structure — this
+                applies across both iOS and Android, not one platform specifically.
+            </p>
+            <p>
+                The mobile version introduces a new skill-based strategic battle system built for
+                touchscreen controls, along with social features like Pal breeding in a shared Plaza
+                and cooperative or competitive boss battles, first shown publicly at G-STAR 2025.
+            </p>
+        </div>
+    </section>
+
+    <section class="seo-section">
+        <div class="game-info">
+            <h2>iOS Alpha Testing Status</h2>
+            <p>
+                A closed alpha test has run for players in Japan and South Korea. Krafton has not
+                specified whether this alpha included iOS devices, Android devices, or both — device
+                breakdowns for the alpha haven't been published.
+            </p>
+        </div>
+    </section>
+
+    <section class="seo-section">
+        <div class="game-info">
+            <h2>Why There Is No iOS Download Yet</h2>
+            <p>
+                Because Palworld Mobile hasn't exited closed alpha testing, Krafton has not issued an
+                App Store listing, TestFlight beta, or IPA file for public distribution. Any site
+                offering a "Palworld Mobile iOS download" or sideloading instructions outside of
+                official channels is not legitimate — iOS doesn't support APK files at all, and
+                sideloaded IPAs from unofficial sources carry the same malware and spyware risks as
+                fake Android APKs.
+            </p>
+            <p>
+                For the latest official news, refer to
+                <a class="source-link" href="https://www.krafton.com/en/" target="_blank"
+                    rel="noopener noreferrer">Krafton's official website</a>. We update this page
+                the moment a real App Store listing or TestFlight beta goes live.
+            </p>
+        </div>
+    </section>
+
+    <h2 style="font-size:19px;text-align:left;font-weight:bold;margin:40px 15px 20px 15px;">
+        iOS FAQ</h2>
+
+    <div class="faq-list">
+
+        <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+                <span>Will Palworld Mobile be on iPhone?</span>
+                <i class="faq-arrow">&#9662;</i>
+            </button>
+            <div class="faq-answer">
+                <p>Yes, iOS is one of the two confirmed target platforms for Palworld Mobile,
+                    alongside Android. No release date has been announced yet.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+                <span>Will it be on the App Store?</span>
+                <i class="faq-arrow">&#9662;</i>
+            </button>
+            <div class="faq-answer">
+                <p>A standard App Store release is expected once Palworld Mobile exits closed alpha
+                    testing. No App Store listing or TestFlight beta is live yet.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+                <span>Can I install Palworld Mobile on iPhone right now?</span>
+                <i class="faq-arrow">&#9662;</i>
+            </button>
+            <div class="faq-answer">
+                <p>No. There is no legitimate IPA, TestFlight link, or App Store listing available yet
+                    since the game hasn't reached public release. Any file claiming to be Palworld
+                    Mobile for iOS is not the real game.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+                <span>What are the iOS requirements for Palworld Mobile?</span>
+                <i class="faq-arrow">&#9662;</i>
+            </button>
+            <div class="faq-answer">
+                <p>Official minimum iOS version and supported iPhone/iPad models have not been
+                    announced. Games with similar graphics demands typically require recent A-series
+                    or M-series chips for stable performance.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+                <span>Will Palworld Mobile release on iOS at the same time as Android?</span>
+                <i class="faq-arrow">&#9662;</i>
+            </button>
+            <div class="faq-answer">
+                <p>Not confirmed. Apple's App Store review process for games with loot-based mechanics
+                    and online features tends to be stricter than Google Play's, which could mean iOS
+                    launches slightly after Android even under the same broad release window.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <section class="seo-section">
+        <div class="game-info">
+            <p style="font-size:14px;">
+                Looking for Android details instead? See our
+                <a class="source-link" href="/palworld-mobile-android">Palworld Mobile for Android</a>
+                page, or go back to the <a class="source-link" href="/">main Palworld Mobile hub</a>
+                for general release status.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Palworld Mobile, not affiliated with Krafton or Pocketpair.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var answer = btn.nextElementSibling;
+                var isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+                if (isOpen) {
+                    btn.setAttribute('aria-expanded', 'false');
+                    answer.style.maxHeight = '0px';
+                } else {
+                    btn.setAttribute('aria-expanded', 'true');
+                    answer.style.maxHeight = answer.firstElementChild.scrollHeight + 'px';
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
